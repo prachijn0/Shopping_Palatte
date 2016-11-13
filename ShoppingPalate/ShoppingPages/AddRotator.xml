@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~\ShoppingPalate\Images\aurora.jpg</ImageUrl> 
+    <Impressions>2</Impressions>
+    <Caption>Add 1</Caption>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~\ShoppingPalate\Images\bagsperfect.jpg</ImageUrl>
+    <Impressions>1</Impressions>
+    <Caption>Add 2</Caption>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~\ShoppingPalate\Images\accessories.jpg</ImageUrl>
+    <Impressions>1</Impressions>
+    <Caption>Add 2</Caption>
+  </Ad>
+</Advertisements>

@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ShoppingMasterPage.master.cs" Inherits="ShoppingPalate_ShoppingMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Content/style.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="header">
+			<div>
+				<%--<a href="index.html" id="logo"><img src="../images/logo.gif" alt="logo"/></a>--%>
+			    <h2 style="color:red;"> <center> Welcome To Shopping Palate</center></h2>	
+			</div>
+			<div id="navigation">
+				<ul>
+					<li class="selected"><a href="Home.aspx">Home</a></li>
+					<li><a href="Category.aspx">Categories</a></li>
+					<li><a href="AboutUs.aspx">About Us</a></li>
+					<li><a href="BestSellers.aspx">Best Sellers</a></li>
+					<li><a href="Feedback.aspx">Feedback</a></li>
+                    <li><a href="Charity.aspx">Charity</a></li>
+                    <li><a href="UserProfile.aspx">Your Profile</a></li>
+                    <li><asp:LoginStatus ID="LoginStatus1" runat="server" LoginText=""  LogoutAction="Redirect" LogoutPageUrl="~/ShoppingPalate/ShoppingPages/Home.aspx"  /></li>
+                   <%-- <li><a href="AdminHome.aspx">Admin</a></li>--%>
+               <li>     <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+           
+            <asp:LoginStatus ID="LoginStatus1" runat="server"   /> 
+                            <a href="Home.aspx"></a>
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+          <%--  <asp:ImageButton ID="btnCheckoutWithPaypal" runat="server" ImageUrl="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" OnClick="btnCheckoutWithPaypal_Click" />--%>
+               <%--<asp:button runat="server" text="Check Out" ID="btnChkOut" OnClick="btnChkOut_Click"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:button runat="server" text="Continue Shopping" ID="btnContShpng" OnClick="btnContShpng_Click" />--%>
+        </LoggedInTemplate>
+
+            <RoleGroups>
+                <asp:RoleGroup Roles="Admin">
+                    <ContentTemplate>
+                        <a href="AdminDefault.aspx">Admin</a>
+                    </ContentTemplate>
+                </asp:RoleGroup>
+                <asp:RoleGroup Roles="User">
+                    <ContentTemplate>
+               
+                    </ContentTemplate>
+                </asp:RoleGroup>
+            </RoleGroups>
+        </asp:LoginView></li>
+       
+					<%--<li><a href="accessories.html">Accessories</a></li>
+					<li><a href="jewelry.html">Jewelry</a></li>--%>
+				</ul>
+			</div>
+		</div> 
+    <div>
+       
+       
+		<div class="body">
+            
+           Navigation: <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath> 
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+				<div class="featured">
+				<div class="gallery">
+					<img src="../images/aurora.jpg" alt=""/> 
+					<ul class="first">
+						<li><img src="../Images/beach-bride.jpg" alt=""/></li>
+                        <li><img src="../Images/bagsperfect.jpg" height="140" width="390" alt=""/></li>
+                       <li> <img src="Images/image.jpg" height="140" width="390" alt="" /></li>
+					</ul>
+					<ul>
+						<li><img src="../Images/fashionable.jpg" alt=""/>></li>
+						<li><img src="../Images/accessories.jpg" alt=""/></li>
+						<li><img src="../Images/skin-perfect.jpg" alt=""/></li>
+					</ul>
+				</div>
+			</div>
+         </asp:ContentPlaceHolder>
+			<div style="color:brown">
+                   <style type="text/css">
+<!--
+ a:link { color: purple; text-decoration: none; }
+ a:hover { color: red; text-decoration: underline; }
+--></style>
+                 
+					<h2> Follow us</h2>
+					<a href="http://facebook.com/freewebsitetemplates" id="facebook">Facebook</a>
+					<a href="http://twitter.com/fwtemplates" id="twitter">Twitter</a>
+					<a href="http://www.flickr.com/freewebsitetemplates/" id="flickr">Flickr</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p style="color:deeppink;">&#169; 2011 Herdesigns. All Rights Reserved.</p>
+		</div>
+       
+    </div>
+    </form>
+</body>
+</html>

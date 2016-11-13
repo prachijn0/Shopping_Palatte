@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="~/ShoppingPalate/ShoppingPages/Home.aspx" title="Home"  description="">
+    <siteMapNode url="~/ShoppingPalate/ShoppingPages/Category.aspx" title="Category"  description="" >
+      <siteMapNode url="~/ShoppingPalate/ShoppingPages/SubCategory.aspx" title="Products"  description="" >
+        <siteMapNode url="~/ShoppingPalate/ShoppingPages/ProductDetails.aspx" title="Product Details"  description="" >
+          <siteMapNode url="~/ShoppingPalate/ShoppingPages/Cart.aspx" title="View Cart"  description="" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/ShoppingPalate/ShoppingPages/BestSellers.aspx" title="Best Sellers"  description="" />
+    <siteMapNode url="~/ShoppingPalate/ShoppingPages/Feedback.aspx" title="FeedBack"  description="" />
+    <siteMapNode url="~/ShoppingPalate/ShoppingPages/Charity.aspx" title="Charity"  description="" />
+    <siteMapNode url="~/ShoppingPalate/ShoppingPages/AdminDefault.aspx" title="Admin"  description="" >
+      <siteMapNode url="~/ShoppingPalate/ShoppingPages/AddCategory.aspx" title="Add/Edit Category"  description="" />
+      <siteMapNode url="~/ShoppingPalate/ShoppingPages/AddProduct.aspx" title="Add Product"  description="" />
+      <siteMapNode url="~/ShoppingPalate/ShoppingPages/ViewProduct.aspx" title="View Product Details"  description="" >
+        <siteMapNode url="~/ShoppingPalate/ShoppingPages/EditProduct.aspx" title="Edit Product Details"  description="" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+
+</siteMap>
